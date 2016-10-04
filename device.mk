@@ -201,7 +201,7 @@ PRODUCT_COPY_FILES += \
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fpc1020tp.kl:system/usr/keylayout/fpc1020tp.kl \
-    $(LOCAL_PATH)/keylayout/goodix-fp.kl:system/usr/keylayout/goodix-fp.kl \
+    $(LOCAL_PATH)/keylayout/goodix_fp.kl:system/usr/keylayout/goodix_fp.kl \
     $(LOCAL_PATH)/keylayout/goodix-ts.kl:system/usr/keylayout/goodix-ts.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/synaptics_dsx.kl:system/usr/keylayout/synaptics_dsx.kl \

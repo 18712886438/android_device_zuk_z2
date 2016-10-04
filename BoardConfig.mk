@@ -25,7 +25,7 @@ USE_CLANG_PLATFORM_BUILD := true
 
 TARGET_OTA_ASSERT_DEVICE := z2,Z2,z2plus,z2_plus
 
-PLATFORM_PATH := device/zuk/z2
+PLATFORM_PATH := device/zuk/z2plus
 
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/include
 
@@ -115,7 +115,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/mkhw
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 
 # CNE and DPM

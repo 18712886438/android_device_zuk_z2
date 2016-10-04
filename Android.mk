@@ -70,6 +70,6 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
-include device/zuk/z2/tftp.mk
+include device/zuk/z2plus/tftp.mk
 
 endif
