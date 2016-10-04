@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne \
     services-ext
 
+# CNE
+PRODUCT_PACKAGES += \
+    libcnefeatureconfig
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8996 \
