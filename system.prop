@@ -17,7 +17,7 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 # Start in global mode
-ro.telephony.default_network=10
+ro.telephony.default_network=22,22
 
 debug.sf.hw=1
 debug.egl.hw=1
@@ -289,5 +289,6 @@ persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
 persist.panel.mountflip=3
+#liufeng23 add for CMCC FT UE did not camp on IMS after TDS moving to LTE.
+persist.radio.apn_ff_delay=20000
 
-ro.mk.maintainer=Flour_Mo
