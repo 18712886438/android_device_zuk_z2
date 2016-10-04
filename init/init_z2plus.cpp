@@ -81,7 +81,10 @@ void init_alarm_boot_properties()
      * 8 -> KPDPWR_N pin toggled (power key pressed)
      */
         if(buf[0] == '3')
+	{
+	    property_set("debug.sf.nobootanimation", "1");
             property_set("ro.alarm_boot", "true");
+	}
         else
             property_set("ro.alarm_boot", "false");
     }
@@ -93,18 +96,12 @@ void vendor_load_properties() {
     int rc;
 
     rc = property_get("ro.cm.device", device);
-    if (!rc || strncmp(device, "oneplus3", PROP_VALUE_MAX))
+    if (!rc || strncmp(device, "z2plus", PROP_VALUE_MAX))
         return;
 
-    property_get("ro.boot.rf_version", rf_version);
 
-    if (strstr(rf_version, "11") || strstr(rf_version, "31")) {
-        /* Chinese/America*/
-        property_set("ro.product.model", "ONEPLUS A3000");
-    } else if (strstr(rf_version, "21")) {
-        /* Asia/Europe */
-        property_set("ro.product.model", "ONEPLUS A3003");
-    }
+    property_set("ro.product.model", "z2plus");
+    
 
     init_alarm_boot_properties();
 }
