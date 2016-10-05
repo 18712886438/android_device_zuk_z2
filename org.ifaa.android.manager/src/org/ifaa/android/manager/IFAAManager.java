@@ -11,13 +11,13 @@ public abstract class IFAAManager
     System.loadLibrary("ifaa_jni");
   }
 
-  public String getDeviceModel();
+  public abstract String getDeviceModel();
 
-  public int getSupportBIOTypes(Context paramContext);
+  public abstract int getSupportBIOTypes(Context paramContext);
 
-  public int getVersion();
+  public abstract int getVersion();
 
   public native byte[] processCmd(Context paramContext, byte[] paramArrayOfByte);
 
-  public int startBIOManager(Context paramContext, int paramInt);
+  public abstract int startBIOManager(Context paramContext, int paramInt);
 }
