@@ -22,4 +22,10 @@
     <integer name="config_proximityCheckTimeout">200</integer>
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
+    <!-- Corresponds to color balance level of zero, this is the native
+         display temperature -->
+    <integer name="config_dayColorTemperature">8000</integer>
+    <integer name="config_nightColorTemperature">8000</integer>
+    <!-- For high brightness mode -->
+    <integer name="config_outdoorAmbientLux">20000</integer>
 </resources>
