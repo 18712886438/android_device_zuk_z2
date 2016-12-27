@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod Project
+ * Copyright (C) 2016 The CyanogenMod Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package org.cyanogenmod.hardware;
+package org.mokee.hardware;
 
-import org.cyanogenmod.internal.util.FileUtils;
+import org.mokee.internal.util.FileUtils;
+
+import java.io.File;
 
 /*
  * Disable capacitive keys
@@ -29,17 +31,18 @@ import org.cyanogenmod.internal.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/proc/s1302/virtual_key";
+    private static String CONTROL_PATH = "/sys/devices/virtual/touch/tp_dev/key_enable";
 
     public static boolean isSupported() {
-        return FileUtils.isFileWritable(CONTROL_PATH);
+        return new File(CONTROL_PATH).exists();
     }
 
     public static boolean isActive() {
-        return FileUtils.readOneLine(CONTROL_PATH).equals("1");
+        return (FileUtils.readOneLine(CONTROL_PATH).equals("0"));
     }
 
     public static boolean setActive(boolean state) {
-        return FileUtils.writeLine(CONTROL_PATH, (state ? "1" : "0"));
+        return FileUtils.writeLine(CONTROL_PATH, (state ? "0" : "1"));
     }
+
 }
