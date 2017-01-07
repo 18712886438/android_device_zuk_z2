@@ -122,6 +122,9 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touch/tp_dev/gesture_on"
 TARGET_LDPRELOAD := libNimsWrap.so
 BOARD_USES_QCNE := true
 
+# QCOM Power
+TARGET_POWERHAL_VARIANT := qcom
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
